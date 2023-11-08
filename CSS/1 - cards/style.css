@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&family=Rubik+Iso&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: rgb(205, 14, 75);
+    --cor-secundaria: #5E5E5E;
+    --cor-paragrafo: #ACACAC;
+    --cor-background: #F5F7FA
+}
+
+body {
+    background-color: var(--cor-background);
+    font-family: 'Roboto', 'Times New Roman';
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contato {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.tituloprincipal {
+    color: var(--cor-primaria);
+    font-size: 34px;
+}
+
+section p {
+    font-size: 24px;
+    color: var(--cor-paragrafo);
+    margin: 30px 0 50px 0;
+}
+
+/* card group */
+.card-group {
+    display: flex;
+    gap: 3%;
+}
+
+/* card */
+
+.card {
+    width: 31%;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(105, 85, 85, 0.471);
+    transition: 0.3s;
+    border-bottom: 10px solid var(--cor-primaria);
+}
+
+.card-group:hover > :not(:hover) {
+    opacity: 40%;
+    transform: scale(0.95);
+}
+
+.card img {
+    width: 70%;
+    clip-path: circle();
+    background-size: cover;
+}
+
+.card h3 {
+    color: var(--cor-secundaria);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card h2 {
+    color: var(--cor-primaria);
+    font-size: 27px;
+}
+
+.card p {
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    background-color: #EEEDF5;
+    padding: 20px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.card a:hover {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+
+
+/* responsividade */
+@media only screen and (max-width: 1000px) {
+    .card-group {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 48%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card-group {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+
+    .tituloprincipal {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
