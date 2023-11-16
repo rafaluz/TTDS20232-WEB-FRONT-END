@@ -1,0 +1,108 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html {
+     /* suavizar a rolagem da pagina */
+     scroll-behavior: smooth;
+}
+
+body {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+}
+
+.card {
+     width: 33%;
+     box-shadow: 0 0 10px rgba(105, 104, 104, 0.514);
+     position: relative;
+     margin-bottom: 1000px;
+}
+
+/* position (mexer aqui */
+.card .logo {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 30%;
+     z-index: 2;
+}
+/* -------------------- */
+
+.card .card-img,
+.card .card-img img {
+     width: 100%;
+     /* display: none; */
+     /* visibility: hidden; */
+}
+
+.card .card-body {
+     padding: 20px;
+     text-align: center;
+}
+
+
+/* position (mexer aqui */
+.card .card-img {
+     position: relative;
+}
+
+.card .card-img svg {
+     position: absolute;
+     width: 100%;
+     left: 0;
+     bottom: 0;
+}
+/* ------------------------ */
+.card .card-img svg path{
+     fill: #fff;
+}
+
+
+.card .card-body h2 {
+     margin-bottom: 10px;
+     font-family: 'Rampart One', cursive;
+     font-size: 30px;
+}
+
+.card .card-body p {
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+}
+
+
+
+/* botao flutuante */
+.botao-flutuante {
+     background-color: #3A839F;
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     padding: 20px;
+     text-align: center;  
+     border: #3A839F 4px solid;
+     color: #fff;
+
+     /* position (mexer aqui */
+     position: fixed;
+     right: 1%;
+     bottom: 3%;
+     /* --------------- */
+}
+
+ .botao-flutuante:hover {
+     transition: 0.3s;
+     border: #3A839F 4px solid;
+     color: #3A839F;
+     background: #fff;
+     box-shadow: #3A839F 0 0 32px;
+     text-shadow: #032e3f 0 0 32px 32px;
+     /* cursor: pointer; */
+ }
+
+ .botao-flutuante span {
+     font-size: 25px;
+ }
