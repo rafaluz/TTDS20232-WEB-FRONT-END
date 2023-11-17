@@ -39,11 +39,16 @@ header img {
 /* main */
 main {
      background-color: #d8d6f5;
+     color: #3F3D56;
      display: flex;
      align-items: center;
      padding: 60px 20px;
      flex-wrap: wrap;
      gap: 20px;
+}
+
+main h1 {
+     color: #2F2E41;
 }
 
 .esquerda {
@@ -64,3 +69,8 @@ footer {
 }
 
 
+@media only screen and (max-width: 600px) {
+     header {
+          justify-content: center;
+     }
+}
