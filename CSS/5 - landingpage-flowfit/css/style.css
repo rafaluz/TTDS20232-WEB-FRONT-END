@@ -28,10 +28,6 @@ body {
 .container-fluid {
     width: 100%;
     padding: 0 15px;
-    /* margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap; */
 }
 
 .container {
@@ -105,9 +101,9 @@ header {
     display: none;
 }
 
-.mobile-nav {
+.mobile-nav, .mobile-nav .nav-list, .mobile-nav .btn-login {
     display: none;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .open {
@@ -157,5 +153,5 @@ header {
         margin-top: 20px;
         padding: 10px;
     }
-  
+/* fim do header/navbar */
 }
