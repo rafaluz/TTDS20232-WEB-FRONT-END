@@ -39,6 +39,75 @@ body {
 }
 
 
+/* ------------ grid 12 colunas */
+
+/* Linha para envolver as colunas */
+.row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  /* Coluna flexível com padding */
+  .col {
+    box-sizing: border-box;
+    flex: 1 0 0; /* Cresce proporcionalmente, mas não encolhe */
+    padding: 15px;
+  }
+  
+  /* Colunas para telas grandes */
+  @media (min-width: 992px) {
+    .col-lg-1 { flex-basis: calc(100% / 12 * 1); }
+    .col-lg-2 { flex-basis: calc(100% / 12 * 2); }
+    .col-lg-3 { flex-basis: calc(100% / 12 * 3); }
+    .col-lg-4 { flex-basis: calc(100% / 12 * 4); }
+    .col-lg-5 { flex-basis: calc(100% / 12 * 5); }
+    .col-lg-6 { flex-basis: calc(100% / 12 * 6); }
+    .col-lg-7 { flex-basis: calc(100% / 12 * 7); }
+    .col-lg-8 { flex-basis: calc(100% / 12 * 8); }
+    .col-lg-9 { flex-basis: calc(100% / 12 * 9); }
+    .col-lg-10 { flex-basis: calc(100% / 12 * 10); }
+    .col-lg-11 { flex-basis: calc(100% / 12 * 11); }
+    .col-lg-12 { flex-basis: 100%; }
+  }
+  
+  /* Colunas para telas médias */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .col-md-1 { flex-basis: calc(100% / 12 * 1); }
+    .col-md-2 { flex-basis: calc(100% / 12 * 2); }
+    .col-md-3 { flex-basis: calc(100% / 12 * 3); }
+    .col-md-4 { flex-basis: calc(100% / 12 * 4); }
+    .col-md-5 { flex-basis: calc(100% / 12 * 5); }
+    .col-md-6 { flex-basis: calc(100% / 12 * 6); }
+    .col-md-7 { flex-basis: calc(100% / 12 * 7); }
+    .col-md-8 { flex-basis: calc(100% / 12 * 8); }
+    .col-md-9 { flex-basis: calc(100% / 12 * 9); }
+    .col-md-10 { flex-basis: calc(100% / 12 * 10); }
+    .col-md-11 { flex-basis: calc(100% / 12 * 11); }
+    .col-md-12 { flex-basis: 100%; }
+  }
+  
+  /* Colunas para telas pequenas */
+  @media (max-width: 768px) {
+    .col-sm-1 { flex-basis: calc(100% / 12 * 1); }
+    .col-sm-2 { flex-basis: calc(100% / 12 * 2); }
+    .col-sm-3 { flex-basis: calc(100% / 12 * 3); }
+    .col-sm-4 { flex-basis: calc(100% / 12 * 4); }
+    .col-sm-5 { flex-basis: calc(100% / 12 * 5); }
+    .col-sm-6 { flex-basis: calc(100% / 12 * 6); }
+    .col-sm-7 { flex-basis: calc(100% / 12 * 7); }
+    .col-sm-8 { flex-basis: calc(100% / 12 * 8); }
+    .col-sm-9 { flex-basis: calc(100% / 12 * 9); }
+    .col-sm-10 { flex-basis: calc(100% / 12 * 10); }
+    .col-sm-11 { flex-basis: calc(100% / 12 * 11); }
+    .col-sm-12 { flex-basis: 100%; }
+  }
+  
+
+/* ------------ fim grid 12 colunas */
+
 /* ---------- header e navbar ---------- */
 header {
     background-color: var(--primary-color);
@@ -153,5 +222,47 @@ header {
         margin-top: 20px;
         padding: 10px;
     }
+}
 /* fim do header/navbar */
+
+/* seção inicio */
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+#home {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+    z-index: 1;
+    
+}
+
+#home .home-image {
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+}
+
+#home .home-img img {
+    margin-top: 80px;
+}
+
+#home .shape-liquid {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: -10%;
+    right: 5%;
+    z-index: -1;
+}
+
+#home .shape-liquid path {
+    fill: var(--color-action);
+}
+
+#home .shape-liquid:nth-child(2) {
+    filter: blur(50px);
+
 }
