@@ -34,7 +34,7 @@ body {
 
 .container-fluid {
     width: 100%;
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
 }
 
 .container {
@@ -43,6 +43,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    /* padding: 0 1.5rem; */
 }
 
 
@@ -53,9 +54,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -1.5rem;
-    margin-left: -1.5rem;
-  }
+}
   
   /* Coluna flexível com padding */
   .col {
@@ -245,6 +244,8 @@ header {
 /* fim do header/navbar */
 
 /* ----------- section home ------------ */
+
+
 .home-info {
     display: flex;
     flex-direction: column;
@@ -285,7 +286,7 @@ header {
 
 #home {
     background-color: var(--primary-color);
-    padding: 60px 0;
+    padding: 6rem 0 40rem 0;
     z-index: 1;
     
 }
@@ -293,11 +294,11 @@ header {
 #home .home-image {
     position: relative;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 6rem;
 }
 
 #home .home-img img {
-    margin-top: 80px;
+    margin-top: 8rem;
 }
 
 #home .shape-liquid {
@@ -314,8 +315,20 @@ header {
 }
 
 #home .shape-liquid:nth-child(2) {
-    filter: blur(30px);
+    filter: blur(3rem);
 
 }
 
 /* ----------- end section home ------------ */
+
+/* ----------- section about ------------ */
+
+#about {
+    background-color: #fff;
+    box-shadow: 0 0 5rem rgba(64, 64, 64, 0.186);
+    padding: 6rem 0 60rem 0;
+    z-index: 2;
+    margin-top: -25rem;
+    border-radius: 0.8rem;
+
+}
