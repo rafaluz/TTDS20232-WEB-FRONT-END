@@ -9,12 +9,18 @@
 }
 
 :root {
-    --primary-color: #001F3F;
+    --primary-color: #10263e;
+    --secundary-color: #FFA500;
+    --color-action: #2ECC71;
+    --color-inverse: #f4f3f3;
+    /* --primary-color: #001F3F;
     --secundary-color: #2ECC71;
     --color-background: #F2F2F2;
     --color-action: #FFA500;
-    --color-inverse: #fff;
+    --color-inverse: #f4f3f3; */
     font-family: 'Roboto', sans-serif;
+    /* 1rem = 16px (User Agent) = 100% (User Agent) */
+    font-size: 62.5%; /* 10px */
 }
 
 .color-action {
@@ -22,17 +28,18 @@
 }
 
 body {
-    padding-top: 60px;
+    /* padding-top: 6rem; */
+    font-size: clamp(1.4rem, 1.6rem, 2vh);
 }
 
 .container-fluid {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 1.5rem;
 }
 
 .container {
     width: 80%;
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -46,15 +53,15 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
   }
   
   /* Coluna flexível com padding */
   .col {
     box-sizing: border-box;
     flex: 1 0 0; /* Cresce proporcionalmente, mas não encolhe */
-    padding: 15px;
+    padding: 1.5rem;
   }
   
   /* Colunas para telas grandes */
@@ -111,8 +118,8 @@ body {
 /* ---------- header e navbar ---------- */
 header {
     background-color: var(--primary-color);
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
 }
 
 .nav-bar {
@@ -120,12 +127,12 @@ header {
     justify-content: space-between;
     align-items: center;
     color: var(--color-inverse) ;
-    min-height: 60px;
+    min-height: 6rem;
 }
 
 .nav-bar .nav-list {
     display: flex;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .nav-bar .nav-list .nav-item .nav-link {
@@ -141,9 +148,9 @@ header {
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 0.2rem;
     background-color: var(--color-action);
-    bottom: -8px;
+    bottom: -0.8rem;
     left: 0;
     transition: 0.25s;
 }
@@ -152,18 +159,24 @@ header {
     width: 100%;
 }
 
+
 .btn-login {
     background-color: var(--color-action);
-    color: var(--primary-color);
     font-weight: 700;
-    padding: 5px 20px;
-    border-radius: 4px;
+    color: var(--primary-color);
+    border: 3px solid var(--color-action);
+    padding: 0.5rem 2.0rem;
+    text-align: center;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    transition: 0.3s;
 }
 
 .btn-login:hover {
-    color: var(--color-inverse);
-    text-shadow: 0 0 3px var(--primary-color);
-    box-shadow: 0 0 10px var(--color-action);
+    background-color: var(--primary-color);
+    color: var(--color-action);
+    border: 3px solid var(--color-action);
+    box-shadow: 0 0 1rem var(--color-action);
 }
 
 .mobile-nav-icon {
@@ -181,7 +194,6 @@ header {
 /* ---------- fim do header/navbar ---------- */
 
 
-
 /* -------------- responsividade ---------------- */
 /* header/navbar */
 @media only screen and (max-width: 600px) {
@@ -196,18 +208,25 @@ header {
 
     .mobile-nav {
         /* text-align: center; */
-        padding: 30px 0;
+        padding: 3rem 0;
+        background-color: var(--primary-color);
     }   
+
+    .border-gradient {
+        /* width: 100%; */
+        height: 0.2rem;
+        background: linear-gradient(to right, transparent, var(--color-action), transparent);;
+    }
 
     .mobile-nav .nav-list {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 1.5rem;
         align-items: center;
     }
     .mobile-nav .nav-list .nav-item .nav-link {
         color: var(--color-inverse);
-        margin: 20px 0;
+        margin: 2rem 0;
         position: relative;
         transition: 0.3s;
     }
@@ -219,13 +238,45 @@ header {
     .mobile-nav .btn-login {
         display: block;
         text-align: center;
-        margin-top: 20px;
-        padding: 10px;
+        margin-top: 2rem;
+        padding: 1rem;
     }
 }
 /* fim do header/navbar */
 
-/* seção inicio */
+/* ----------- section home ------------ */
+.home-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-info h1 {
+    color: var(--color-inverse);
+    font-family: 'Montserrat','Roboto',sans-serif;
+    /* padding-right: 10%; */
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+}
+
+.home-info h2 {
+    color: var(--color-inverse);
+    font-weight: 400;
+}
+
+.home-info h3 {
+    color: var(--color-inverse);
+}
+
+.home-info .btn-login {
+    padding: 1.2rem 4rem; 
+    width: fit-content; 
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.8rem;
+}
+
 
 .img-fluid {
     width: 100%;
@@ -263,6 +314,8 @@ header {
 }
 
 #home .shape-liquid:nth-child(2) {
-    filter: blur(50px);
+    filter: blur(30px);
 
 }
+
+/* ----------- end section home ------------ */
