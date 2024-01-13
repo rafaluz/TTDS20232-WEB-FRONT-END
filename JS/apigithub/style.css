@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #6B6A6A;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #309F41;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.25);
+    height: 513px;
+    width: 873px;
+    display: flex;
+    position: relative;
+}
+
+#logoifpi {
+    width: 109px;
+    height: 95px;
+    position: absolute;
+    top: 30px;
+}
+
+#userImage {
+    width: 281px;
+    height: 281px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    border-radius: 50%;
+    border: 30px solid #1E3115;
+    transition: 0.3s;
+}
+
+#userImage:hover {
+    border: 30px solid #CE171F;
+    scale: 1.1;
+}
+
+.content-image {
+    width: 45%;
+    background-image: url(img/fundobonito.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.content h1 {
+    font-size: 38px;
+    color: #fff;
+}
+
+.content p {
+    font-size: 24px;
+    color: #1E3115;
+    margin: 10px 0;
+}
+
+.icon {
+    font-size: 60px;
+    color: #1E3115;
+    margin-right: 10px;
+}
+
+.icon i {
+    transition: 0.5s ;
+}
+
+.icon:hover > i {
+    color: #CE171F;
+    transform: rotate(15deg);
+}
+
+
+@media only screen and (max-width: 800px) {
+    #logoifpi {
+        display: none;
+    }
+
+    #userImage {
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    .content-image {
+        display: none;
+    }
+
+    .card {
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content {
+        width: 90%;
+        padding-right: 0;
+    }
+}
