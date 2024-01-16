@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor-primaria: #E98F3D ;
+    --cor-secundaria: #1A1A1A;
+    --cor-terciaria: #C8C8C9;
+}
+
+.cor-primaria {
+    color: var(--cor-primaria) !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* sobrescrevendo cores do botao primario do bootstrap */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--cor-primaria);
+    --bs-btn-border-color: var(--cor-primaria);
+    --bs-btn-hover-color: var(--cor-primaria);
+    --bs-btn-hover-bg: var(--cor-secundaria);
+    --bs-btn-hover-border-color: var(--cor-primaria);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--cor-primaria);
+    --bs-btn-active-border-color: var(--cor-primaria);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--cor-primaria);
+    --bs-btn-disabled-border-color: var(--cor-primaria);
+}
+
+
+.btn-outline-primary {
+    --bs-btn-color: var(--cor-primaria);
+    --bs-btn-border-color: var(--cor-primaria);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--cor-primaria);
+    --bs-btn-hover-border-color: var(--cor-primaria);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--cor-primaria);
+    --bs-btn-active-border-color: var(--cor-primaria);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--cor-primaria);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--cor-primaria);
+    --bs-gradient: none;
+}
+
+
+
+/* cabeçalho */
+.navbar,
+.nav-link,
+.navbar-brand {
+     background-color: var(--cor-secundaria) !important;
+     color: #fff !important;
+}
+
+.nav-link:hover {
+     color: var(--cor-primaria) !important;
+     transition: 0.3s;
+}
+
+
+.navbar-toggler,
+.navbar .navbar-toggler-icon {
+     color: var(--cor-primaria) !important;
+     /* background-color: var(--primaria) !important; */
+}
+
+
+
+/* seção inicio */
+.inicio {
+    background-color: var(--cor-secundaria);
+}
+
+.inicio h1 {
+    color: var(--cor-terciaria);
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.inicio h2 {
+    color: var(--cor-terciaria);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.inicio p {
+    color: var(--cor-terciaria);
+    font-size: 18px;
+}
+
+.botao-acao {
+    /* font-size: 22px; */
+}
+
+.textologomarca {
+    font-weight: bold;
+}
